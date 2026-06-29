@@ -1,0 +1,67 @@
+PLANO DE TESTE - CALCULADORA DE MATERIAIS PARA OBRA RESIDENCIAL
+Disciplina: Desenvolvimento de Sistemas
+Data: 28/06/2026
+
+================================================================
+CASOS DE TESTE
+================================================================
+
+CT01 - Gravar orcamento valido
+  Precondição: Sistema aberto no navegador
+  Passos:
+    1. Preencha o campo Nome com "Maria Valentina"
+    2. Preencha o campo Valor do Material com "25,00"
+    3. Preencha o campo Valor da Mao de Obra com "50,00"
+    4. Clique no botao "Calcular Total"
+    5. Clique no botao "Gravar Orcamento"
+  Resultado Esperado: Mensagem "Sucesso ao gravar o orcamento!" e
+                      registro aparece na tabela abaixo.
+  Status: PASSOU 
+
+----------------------------------------------------------------
+
+CT02 - Validacao: nome com numero
+  Precondição: Sistema aberto no navegador
+  Passos:
+    1. Preencha o campo Nome com "Jo4o 123"
+    2. Clique no botao "Gravar Orcamento"
+  Resultado Esperado: Mensagem de erro "Somente letras e espacos
+                      sao permitidos."
+  Status: PASSOU
+
+----------------------------------------------------------------
+
+CT03 - Validacao: campos em branco
+  Precondição: Sistema aberto com todos os campos vazios
+  Passos:
+    1. Nao preencha nenhum campo
+    2. Clique no botao "Gravar Orcamento"
+  Resultado Esperado: Mensagem de erro exibida em todos os
+                      campos obrigatorios.
+  Status: PASSOU
+
+----------------------------------------------------------------
+
+CT04 - Calculo do total
+  Precondição: Sistema aberto no navegador
+  Passos:
+    1. Preencha Valor do Material com "x"
+    2. Preencha Valor da Mao de Obra com "y"
+    3. Clique no botao "Calcular Total"
+  Resultado Esperado: Campo Total: x + y  
+  
+  Status: PASSOU
+
+----------------------------------------------------------------
+
+CT05 - Persistencia no banco de dados
+  Precondição: Pelo menos 1 orcamento ja gravado
+  Passos:
+    1. Feche o navegador completamente
+    2. Reabra o arquivo index.html no navegador
+  Resultado Esperado: Registro gravado anteriormente continua
+                      aparecendo na tabela.
+  Status: PASSOU
+
+================================================================
+RESULTADO GERAL: 5
